@@ -29,7 +29,7 @@ const ServiceCheckout = () => {
 
         }
         console.log(booking)
-        fetch('http://localhost:5000/booking',{
+        fetch('https://car-doctor-server-omega-gilt.vercel.app/booking',{
             method:"POST",
             headers:{
                 "content-type": "application/json"

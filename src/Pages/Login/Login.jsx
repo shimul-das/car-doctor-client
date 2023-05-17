@@ -18,24 +18,7 @@ const Login = () => {
         signInUser(email,password)
         .then(result=>{
             const user=result.user;
-            const loggeduser={
-                email:user.email
-            }
-            console.log(loggeduser)
             navigate(from,{replace:true})
-            fetch('http://localhost:5000/jwt',{
-                method:"POST",
-                headers:{
-                    "content-type":"application/json"
-                },
-                body:JSON.stringify(loggeduser)
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                console.log("JWT response",data)
-                //warning : Local storage is not best place to store access token
-                localStorage.setItem('car-access-token',data.token)
-            })
             console.log(user);
         })
         .catch(error=>{

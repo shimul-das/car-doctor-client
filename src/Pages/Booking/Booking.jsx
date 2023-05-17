@@ -8,7 +8,7 @@ const Booking = () => {
     const navigate=useNavigate()
     const { user } = useContext(authcontext)
     const [booked, setbooked] = useState([]);
-    const url = `http://localhost:5000/booked?email=${user?.email}`;
+    const url = `https://car-doctor-server-omega-gilt.vercel.app/booked?email=${user?.email}`;
     useEffect(() => {
         fetch(url, {
             method: 'GET',
@@ -30,7 +30,7 @@ const Booking = () => {
 
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/booked/${id}`, {
+        fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

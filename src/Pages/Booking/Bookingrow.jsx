@@ -5,7 +5,7 @@
 //     const handledelete = (id) => {
 //         const processed = confirm("Are you sure you want to delete it");
 //         if (processed) {
-//             fetch(`http://localhost:5000/booked/${id}`, {
+//             fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
 //                 method: "DELETE"
 //             })
 //                 .then(res => res.json())
@@ -19,7 +19,7 @@
 //         }
 //     }
 //     const handleupdate = (id) => {
-//         fetch(`http://localhost:5000/booked/${id}`, {
+//         fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
 //             method: "PATCH"
 //         })
 //             .then(res => res.json())
@@ -73,7 +73,7 @@
 //   const handleDelete = (id) => {
 //     const processed = confirm("Are you sure you want to delete it");
 //     if (processed) {
-//       fetch(`http://localhost:5000/booked/${id}`, {
+//       fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
 //         method: "DELETE"
 //       })
 //         .then(res => res.json())
@@ -87,7 +87,7 @@
 //   };
 
 //   const handleUpdate = (id) => {
-//     fetch(`http://localhost:5000/booked/${id}`, {
+//     fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
 //       method: "PATCH",
 //       headers:{
 //         "content-type":"application/json"
@@ -145,7 +145,7 @@ const Bookingrow = ({ book,handleUpdate }) => {
 
 //   useEffect(() => {
 //     // Fetch the booking status from the database
-//     fetch(`http://localhost:5000/booked/${_id}`)
+//     fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${_id}`)
 //       .then(res => res.json())
 //       .then(data => {
 //         setIsConfirmed(data.status === 'confirmed');
@@ -155,7 +155,7 @@ const Bookingrow = ({ book,handleUpdate }) => {
   const handleDelete = (id) => {
     const processed = confirm("Are you sure you want to delete it");
     if (processed) {
-      fetch(`http://localhost:5000/booked/${id}`, {
+      fetch(`https://car-doctor-server-omega-gilt.vercel.app/booked/${id}`, {
         method: "DELETE"
       })
         .then(res => res.json())
