@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import login from '../../../src/assets/images/login/login.svg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authcontext } from '../../Providers/AuthProvider';
+import { SocialLogin } from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     const {signInUser,user}=useContext(authcontext)
@@ -17,11 +18,11 @@ const Login = () => {
         signInUser(email,password)
         .then(result=>{
             const user=result.user;
-            //navigate(from,{replace:true})
             const loggeduser={
                 email:user.email
             }
             console.log(loggeduser)
+            navigate(from,{replace:true})
             fetch('http://localhost:5000/jwt',{
                 method:"POST",
                 headers:{
@@ -72,6 +73,7 @@ const Login = () => {
                     </div>
                     </form>
                     <p className='text-center pb-4'>You are new in car doctor!! <Link className='text-orange-600 text-xl text-bold' to='/signup' >Sign Up</Link></p>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>

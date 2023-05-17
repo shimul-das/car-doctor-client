@@ -141,7 +141,7 @@ import React, { useState,} from 'react';
 
 const Bookingrow = ({ book,handleUpdate }) => {
   const { _id, customerName, email, price, date, img ,status} = book;
-  const [isConfirmed, setIsConfirmed] = useState(false);
+  // const [isConfirmed, setIsConfirmed] = useState(false);
 
 //   useEffect(() => {
 //     // Fetch the booking status from the database
