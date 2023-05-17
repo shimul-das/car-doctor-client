@@ -6,6 +6,9 @@ const Header = () => {
     const {user,signout}=useContext(authcontext)
     const handlesignout=()=>{
         signout()
+        .then(()=>{
+            localStorage.removeItem('car-access-token')
+        })
     }
 
     return (
